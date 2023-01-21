@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checks_and_frees.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aplank <aplank@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ip <ip@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 14:13:28 by aplank            #+#    #+#             */
-/*   Updated: 2023/01/18 18:30:16 by aplank           ###   ########.fr       */
+/*   Updated: 2023/01/21 18:14:09 by ip               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	check_input(t_data *data, char *input[])
 	}
 }
 
-void	check_list(t_data *data, t_stack *head)
+/* void	check_list(t_data *data, t_stack *head)
 {
 	t_stack	*temp;
 
@@ -50,6 +50,33 @@ void	check_list(t_data *data, t_stack *head)
 		{
 			ft_printf("Error\n");
 			exit_function(data);
+		}
+		temp = temp->next;
+	}
+} */
+
+void	doubles_check(t_data *data)
+{
+	t_stack	*temp;
+	t_stack	*rotater;
+
+	temp = data->head_a;
+	if (data->len_a == 2 && temp->integer == temp->next->integer)
+	{
+		ft_printf("Error\n");
+		exit_function(data);
+	}
+	while (temp->next != data->head_a)
+	{
+		rotater = temp->next;
+		while (rotater->next != data->head_a)
+		{
+			if (temp->integer == rotater)
+			{
+				ft_printf("Error\n");
+				exit_function(data);
+			}
+			rotater = rotater->next;
 		}
 		temp = temp->next;
 	}
