@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aplank <aplank@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ip <ip@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 13:51:43 by aplank            #+#    #+#             */
-/*   Updated: 2023/01/18 22:35:42 by aplank           ###   ########.fr       */
+/*   Updated: 2023/01/24 00:35:12 by ip               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,6 @@ void	initialize_data(t_data *data)
 	data->len_b = 0;
 	data->pos_b = 0;
 	data->help_len = 0;
-	
-	data->divider = 101;
 	data->eighth = 0;
 }
 
@@ -91,6 +89,7 @@ int	main(int argc, char *argv[])
 	convert_input(data, argv);
 	if (!data->head_a)
 		return (1);
+	redirect(data);
 	make_help_list(data, data->head_a, data->len_a);
 	algorithm(data);
 	exit_function(data);

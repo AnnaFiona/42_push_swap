@@ -6,7 +6,7 @@
 /*   By: ip <ip@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 13:37:31 by aplank            #+#    #+#             */
-/*   Updated: 2023/01/21 17:31:36 by ip               ###   ########.fr       */
+/*   Updated: 2023/01/24 00:33:16 by ip               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,10 @@ void    mixed_bubble_sort(t_stack **head, int len, char c);
 void	check_int(t_data *data, char *nptr, long long int i);
 int		atoi_with_int_check(t_data *data, char *nptr);
 
+//cases_four_five.c
+void	case_four(t_data *data);
+void	case_five(t_data *data);
+
 //cases_threes.c
 void	case_three_two_one(t_data *data);
 void    case_three_one_two(t_data *data);
@@ -58,7 +62,8 @@ void    case_one_three_two(t_data *data);
 
 //checks_and_frees.c
 void	check_input(t_data *data, char *input[]);
-void	check_list(t_data *data, t_stack *head);
+//void	check_list(t_data *data, t_stack *head);
+void	doubles_check(t_data *data);
 void	free_list(t_stack *head, int len);
 void	exit_function(t_data *data);
 
@@ -70,7 +75,6 @@ void	push_stack(t_data *data, t_stack **head_push, \
 		t_stack **head_recieve, char r);
 
 //get_divider_and_redirect.c
-void	get_divider(t_data *data);
 void	redirect(t_data *data);
 void	redirect_threes(t_data *data);
 

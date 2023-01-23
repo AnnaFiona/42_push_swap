@@ -6,14 +6,15 @@
 #    By: ip <ip@student.42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/09 12:24:01 by aplank            #+#    #+#              #
-#    Updated: 2023/01/21 17:10:01 by ip               ###   ########.fr        #
+#    Updated: 2023/01/23 23:55:02 by ip               ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-MY_SOURCES = algorithm_utils.c algorithm.c atoi_with_int_check.c cases_threes.c checks_and_frees.c
-			 functions.c get_divider_and_redirect.c help_list.c main.c mixed_bubble_sort.c
+MY_SOURCES = algorithm_utils.c algorithm.c atoi_with_int_check.c cases_four_five.c
+			 cases_threes.c checks_and_frees.c functions.c get_divider_and_redirect.c
+			 help_list.c main.c mixed_bubble_sort.c
 
 MY_OBJECTS = $(MY_SOURCES:.c=.o)
 

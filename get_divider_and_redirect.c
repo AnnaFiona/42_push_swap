@@ -6,13 +6,13 @@
 /*   By: ip <ip@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 15:42:21 by aplank            #+#    #+#             */
-/*   Updated: 2023/01/21 17:40:47 by ip               ###   ########.fr       */
+/*   Updated: 2023/01/24 00:33:02 by ip               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	get_divider(t_data *data)
+static void	get_divider(t_data *data)
 {
 	if (data->len_a >= 10000)
 		data->divider = 51;
@@ -30,11 +30,6 @@ void	get_divider(t_data *data)
 		data->divider = 3;
 }
 
-void	redirect(t_data *data)
-{
-	if (data->len_a = 3)
-		redirect_threes;
-}
 
 void	redirect_threes(t_data *data)
 {
@@ -57,4 +52,16 @@ void	redirect_threes(t_data *data)
 	else if (temp->integer < temp->next->integer && temp->integer < \
 			temp->prev->integer && temp->next->integer > temp->prev->integer)
 		case_one_three_two(data);
+}
+
+void	redirect(t_data *data)
+{
+	if (data->len_a > 5)
+		get_divider(data);
+	else if (data->len_a = 3)
+		redirect_threes;
+	else if (data->len_a = 4)
+		case_four(data);
+	else if (data->len_a = 5)
+		case_five(data);
 }
